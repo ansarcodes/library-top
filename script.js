@@ -14,5 +14,7 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 function displayBooks() {
-    
+    myLibrary.forEach(book => {
+        
+    })
 }
