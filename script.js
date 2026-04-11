@@ -43,11 +43,25 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 function displayBooks() {
-    const cardsContainer = document.querySelector("cards-container");
+    const cardsContainer = document.querySelector(".cards-container");
     myLibrary.forEach(book => {
         let newCard = document.createElement("div");
-        newCard.innerText = `${this.title}\n${this.author} ${this.pages}`;
+        newCard.innerText = `${book.title}\n${book.author} ${book.pages}\n`;
         newCard.setAttribute("class", "card");
-        newCard.setAttribute("id", this.id);
+        newCard.setAttribute("id", book.id);
+        let readButton = document.createElement("button");
+        readButton.textContent = `${book.read}`;
+        readButton.addEventListener("click", () => {
+            if (readButton.textContent == "Read") {
+                book.read = "Not read";
+                readButton.textContent = `${book.read}`;
+            } else {
+                book.read = "Read";
+                readButton.textContent = `${book.read}`;
+            }
+        });
+        newCard.appendChild(readButton);
+        cardsContainer.appendChild(newCard);
     })
 }
+displayBooks();
