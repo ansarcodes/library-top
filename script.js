@@ -40,10 +40,12 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
+    displayBooks();
 }
 
 function displayBooks() {
     const cardsContainer = document.querySelector(".cards-container");
+    cardsContainer.replaceChildren();
     myLibrary.forEach(book => {
         let newCard = document.createElement("div");
         newCard.innerText = `${book.title}\n${book.author} ${book.pages}\n`;
