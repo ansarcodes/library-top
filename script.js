@@ -61,6 +61,13 @@ function displayBooks() {
             }
         });
         newCard.appendChild(readButton);
+        let removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.addEventListener("click", () => {
+            myLibrary.splice(myLibrary.indexOf(book), 1);
+            newCard.remove();
+        });
+        newCard.appendChild(removeButton);
         cardsContainer.appendChild(newCard);
     })
 }
