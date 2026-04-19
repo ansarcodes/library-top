@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">Library</div>
+    <div class="header">
+        Library
+        <button popovertarget="add-book">Add book</button>
+        <dialog id="add-book" popover>
+            <button popovertarget="add-book" popovertargetaction="hide">X</button>
+        </dialog>
+    </div>
     <div class="main-container">
-        <div class="interface"></div>
         <div class="cards-container">
         </div>
     </div>
