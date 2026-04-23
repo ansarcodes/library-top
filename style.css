@@ -16,3 +16,20 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
+dialog {
+    margin: auto;
+    padding: 1em;
+    font-size: 2em;
+}
+dialog[open] {
+    position: relative;
+}
+#x {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}

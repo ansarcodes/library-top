@@ -10,11 +10,29 @@
     <div class="header">
         Library
         <button popovertarget="add-book">Add book</button>
-        <dialog id="add-book" popover>
-            <button popovertarget="add-book" popovertargetaction="hide">X</button>
-        </dialog>
     </div>
     <div class="main-container">
+        <dialog id="add-book" popover>
+            <button popovertarget="add-book" popovertargetaction="hide" id="x">X</button>
+            <form action="">
+                <div class="new-book-title">                
+                    <label for="new-book-title">Title:</label>
+                    <input type="text" id="new-book-title">
+                </div>
+                <div class="new-book-author">
+                    <label for="new-book-author">Author:</label>
+                    <input type="text" id="new-book-author">
+                </div>
+                <div class="new-book-pages">                    
+                    <label for="new-book-pages">Pages:</label>
+                    <input type="number" name="new-book-pages" id="new-book-pages">
+                </div>
+                <div class="new-book-read">
+                    <label for="new-book-read">Read:</label>
+                    <input type="text" id="new-book-read">
+                </div>
+            </form>
+        </dialog>
         <div class="cards-container">
         </div>
     </div>
