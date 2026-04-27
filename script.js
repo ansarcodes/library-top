@@ -74,3 +74,10 @@ function displayBooks() {
     })
 }
 displayBooks();
+
+document.getElementById("add-new-book-button").addEventListener("click", () => {
+    addBookToLibrary(document.getElementById("new-book-title").value, document.getElementById("new-book-author").value, document.getElementById("new-book-pages").value, document.getElementById("new-book-pages").value, document.getElementById("new-book-read").value);
+    document.getElementById("dialog-form").reset();
+    document.getElementById("add-book").hidePopover();
+    event.preventDefault();
+})

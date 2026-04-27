@@ -13,8 +13,8 @@
     </div>
     <div class="main-container">
         <dialog id="add-book" popover>
-            <button popovertarget="add-book" popovertargetaction="hide" id="x">X</button>
-            <form action="">
+            <button popovertarget="add-book" popovertargetaction="hide" id="x" type="button">X</button>
+            <form action="" id="dialog-form">
                 <div class="new-book-title">                
                     <label for="new-book-title">Title:</label>
                     <input type="text" id="new-book-title">
@@ -30,6 +30,9 @@
                 <div class="new-book-read">
                     <label for="new-book-read">Read:</label>
                     <input type="text" id="new-book-read">
+                </div>
+                <div class="add-new-book-button">
+                    <button id="add-new-book-button">Add book</button>
                 </div>
             </form>
         </dialog>
