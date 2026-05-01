@@ -1,30 +1,30 @@
 const myLibrary = [
     {
-        title: "Test1",
-        author: "Test1",
-        pages: 123,
+        title: "Crime and Punishment",
+        author: "Fyodor Dostoevsky",
+        pages: 600,
         read: "Read",
         id: "373c1960-6735-41a8-bae8-53430eaca371"
     },
     {
-        title: "Test2",
-        author: "Test2",
-        pages: 321,
-        read: "Not read",
+        title: "The Master and Margarita",
+        author: "Mikhail Bulgakov",
+        pages: 450,
+        read: "Read",
         id: "38b4eaa5-6fc4-4dda-9222-4148b9b45bf0"
     },
     {
-        title: "Test3",
-        author: "Test3",
-        pages: 456,
+        title: "Anna Karenina",
+        author: "Leo Tolstoy",
+        pages: 1000,
         read: "Not read",
         id: "0a96f7aa-b790-4c52-8bbc-be8fbec92d78"
     },
     {
-        title: "Test4",
-        author: "Test4",
-        pages: 654,
-        read: "Read",
+        title: "Pale Fire",
+        author: "Vladimir Nabokov",
+        pages: 320,
+        read: "Not read",
         id: "3af124bd-12df-4a7e-8756-b88cd5db5bcd"
     },
 ];
@@ -48,7 +48,7 @@ function displayBooks() {
     cardsContainer.replaceChildren();
     myLibrary.forEach(book => {
         let newCard = document.createElement("div");
-        newCard.innerText = `${book.title}\n${book.author} ${book.pages}\n`;
+        newCard.innerText = `${book.title}\n${book.author} ${book.pages}pg\n`;
         newCard.setAttribute("class", "card");
         newCard.setAttribute("id", book.id);
         let readButton = document.createElement("button");
